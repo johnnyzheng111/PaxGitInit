@@ -16,6 +16,9 @@ import SignIn from './pages/signin';
 import Protected from './Protected';
 import MentalHealthInfo from './pages/mentalHealthInfo';
 import Support from './pages/support';
+import Alzheimers from './pages/mentalHealthInfo/alzheimers';
+import Ptsd from './pages/mentalHealthInfo/ptsd';
+import Schizophrenia from './pages/mentalHealthInfo/schizophrenia';
 
 
 
@@ -35,6 +38,9 @@ function App() {
           <Route path='/profile' element={<Protected isAuth={isAuth}><Profile/></Protected>} />
           <Route path='/signin' element={<SignIn setIsAuth={setIsAuth}/>} />
           <Route path='/support' element={<Support/>} />
+          <Route path='/mentalHealthInfo/alzheimers' element={<Alzheimers/>} />
+          <Route path='/mentalHealthInfo/ptsd' element={<Ptsd/>} />
+          <Route path='/mentalHealthInfo/schizophrenia' element={<Schizophrenia/>} />
           {/* <Route path="/createPost" element={<Protected isAuth={isAuth}><CreatePost/></Protected>} /> */}
         </Routes>
       </Router>

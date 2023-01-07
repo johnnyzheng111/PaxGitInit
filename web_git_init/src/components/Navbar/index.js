@@ -11,15 +11,11 @@ import { useState } from 'react';
 import { signOut } from 'firebase/auth';
 import { auth } from "../../Firebase.js";
 
-//variables
-
 
 // import signInWithGoogle from "../../pages/signin"
 
 function NavBarIndex() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
-  
-  //dropdown menu on hover
   const [show, setShow] = useState(false);
   const showDropdown = (e)=>{
     setShow(!show);
@@ -27,6 +23,10 @@ function NavBarIndex() {
   const hideDropdown = e => {
     setShow(false);
   }
+  //dropdown menu on hover
+
+  
+
 
   const signUserOut = () =>{
     signOut(auth).then(() => {
@@ -49,7 +49,8 @@ function NavBarIndex() {
         <Navbar.Toggle id='NavToggle'/>
         <Navbar.Collapse id='NavColor'>
           <Nav> 
-            <NavDropdown title="Communication"    id="collasible-nav-dropdown" 
+            <NavDropdown title="Communication" 
+            id="collasible-nav-dropdown" 
             show={show}
             onMouseEnter={showDropdown} 
             onMouseLeave={hideDropdown}>
@@ -59,7 +60,19 @@ function NavBarIndex() {
             </NavDropdown>
 			<Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/support">Support</Nav.Link>
-            <Nav.Link href="/mentalhealthinfo">Mental Health Info</Nav.Link>
+            <NavDropdown
+            title="Mental Health Info"    
+            id="collasible-nav-dropdown" 
+            show={show}
+            onMouseEnter={showDropdown} 
+            onMouseLeave={hideDropdown}>
+              <NavDropdown.Item href="/mentalHealthInfo/Alzheimers">Alzheimers</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/mentalHealthInfo/Ptsd">PTSD</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/mentalHealthInfo/Schizophrenia">Schizophrenia</NavDropdown.Item>
+            </NavDropdown>
+
             {isAuth && <Nav.Link href="/profile">Profile</Nav.Link>}
             {/* {window.location.pathname === "/communication/blogs" && <Nav.Link href="/createPost">Create Post</Nav.Link>} */}
             
