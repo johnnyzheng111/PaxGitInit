@@ -11,10 +11,22 @@ import { useState } from 'react';
 import { signOut } from 'firebase/auth';
 import { auth } from "../../Firebase.js";
 
+//variables
+
+
 // import signInWithGoogle from "../../pages/signin"
 
 function NavBarIndex() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  
+  //dropdown menu on hover
+  const [show, setShow] = useState(false);
+  const showDropdown = (e)=>{
+    setShow(!show);
+  }
+  const hideDropdown = e => {
+    setShow(false);
+  }
 
   const signUserOut = () =>{
     signOut(auth).then(() => {
@@ -37,7 +49,10 @@ function NavBarIndex() {
         <Navbar.Toggle id='NavToggle'/>
         <Navbar.Collapse id='NavColor'>
           <Nav> 
-            <NavDropdown title="Communication">
+            <NavDropdown title="Communication"    id="collasible-nav-dropdown" 
+            show={show}
+            onMouseEnter={showDropdown} 
+            onMouseLeave={hideDropdown}>
               <NavDropdown.Item href="/communication/blog">Blog</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/communication/connectwithus">Connect With Us</NavDropdown.Item>
@@ -50,8 +65,8 @@ function NavBarIndex() {
             
           </Nav>
 		  <Nav id='NavBarSignIn' className="ms-auto">
-      {!isAuth ? (<Nav.Link href="/signin" id='NavSignIn'>Sign IN</Nav.Link>)
-      : (<Nav.Link onClick={signUserOut} id='NavSignIn'>Sign OUT</Nav.Link>)}
+      {!isAuth ? (<Nav.Link href="/signin" id='NavSignIn'>Sign In</Nav.Link>)
+      : (<Nav.Link onClick={signUserOut} id='NavSignIn'>Sign Out</Nav.Link>)}
 		  	{/* <Nav.Link onClick={signInWithGoogle} id='NavSignIn'>Sign In</Nav.Link> */}
 		  </Nav>
         </Navbar.Collapse>

@@ -30,8 +30,8 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/communication/connectwithus' element={<ConnectWithUs/>} />
+          <Route path='/communication/blog' element={<Blog/>} />        
           <Route path='/mentalHealthInfo' element={<MentalHealthInfo/>} />
-          <Route path='/communication/blog' element={<Blog/>} />
           <Route path='/profile' element={<Protected isAuth={isAuth}><Profile/></Protected>} />
           <Route path='/signin' element={<SignIn setIsAuth={setIsAuth}/>} />
           <Route path='/support' element={<Support/>} />

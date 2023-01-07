@@ -30,7 +30,7 @@ function SignIn({setIsAuth}) {
 }
   return (
     <div id='SignInMainDiv'>
-    <h1>SignIn</h1>
+    <h1>Sign In</h1>
     <button className="login-with-google-btn" onClick={signInWithGoogle}>Sign-In with Google</button>
 
     </div>
