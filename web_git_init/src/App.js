@@ -19,13 +19,13 @@ import Support from './pages/support';
 import Alzheimers from './pages/mentalHealthInfo/alzheimers';
 import Ptsd from './pages/mentalHealthInfo/ptsd';
 import Schizophrenia from './pages/mentalHealthInfo/schizophrenia';
+import SignUp from './pages/signup';
 
 
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   return (
-    
     <div className='App'>
     <NavBarIndex/>
       <Router>
@@ -36,7 +36,9 @@ function App() {
           <Route path='/communication/blog' element={<Blog/>} />        
           <Route path='/mentalHealthInfo' element={<MentalHealthInfo/>} />
           <Route path='/profile' element={<Protected isAuth={isAuth}><Profile/></Protected>} />
-          <Route path='/signin' element={<SignIn setIsAuth={setIsAuth}/>} />
+          <Route path='/signin' element={<Protected isAuth={!isAuth}><SignIn setIsAuth={setIsAuth}/></Protected>} />
+          <Route path='/signup' element={<SignUp/>} />
+          {/* <Route path='/signup' element={<Protected isAuth={!isAuth}><SignUp/></Protected>} /> */}
           <Route path='/support' element={<Support/>} />
           <Route path='/mentalHealthInfo/alzheimers' element={<Alzheimers/>} />
           <Route path='/mentalHealthInfo/ptsd' element={<Ptsd/>} />
