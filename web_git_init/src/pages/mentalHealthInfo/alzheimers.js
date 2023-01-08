@@ -1,9 +1,9 @@
 import React from 'react'
 
-const alzheimers = () => {
+const Alzheimers = () => {
   return (
     <div>alzheimers</div>
   )
 }
 
-export default alzheimers
+export default Alzheimers

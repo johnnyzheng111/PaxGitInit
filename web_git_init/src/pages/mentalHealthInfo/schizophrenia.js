@@ -1,9 +1,9 @@
 import React from 'react'
 
-const schizophrenia = () => {
+const Schizophrenia = () => {
   return (
     <div>schizophrenia</div>
   )
 }
 
-export default schizophrenia
+export default Schizophrenia

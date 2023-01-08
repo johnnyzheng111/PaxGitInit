@@ -34,6 +34,8 @@ function SignIn({setIsAuth}) {
         );
         console.log(user);
 
+        setIsAuth(true);
+
         // localStorage.setItem("email", loginEmail);
 
         // localStorage.setItem("isAuth", true);
@@ -61,9 +63,9 @@ function SignIn({setIsAuth}) {
         localStorage.setItem("profilPic", profilPic);
 
         localStorage.setItem("isAuth", true);
-        
-        // navigate("/");
         window.location.pathname = "/";
+        // navigate("/");
+        
         
         
     }).catch((error) => {
@@ -95,9 +97,8 @@ function SignIn({setIsAuth}) {
 
 
     <h4> User Logged In: </h4>
-        {user ? user.email : "Not Logged In"}
-
-      <button onClick={logout}> Sign Out </button>
+    {user ? user.email : "Not Logged In"}
+    <button onClick={logout}> Sign Out </button>
     </div>
     </div>
   )

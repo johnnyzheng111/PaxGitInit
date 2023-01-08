@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ptsd = () => {
+const Ptsd = () => {
   return (
     <div>ptsd</div>
   )
 }
 
-export default ptsd
+export default Ptsd
