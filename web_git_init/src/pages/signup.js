@@ -8,7 +8,7 @@ import {
   } from "firebase/auth";
 import "./styles.css"
 
-function signup() {
+function Signup() {
     const [registerEmail, setRegisterEmail] = useState("");
     const [registerPassword, setRegisterPassword] = useState("");
     const [firstName, setFirstName] = useState("");
@@ -75,4 +75,4 @@ function signup() {
   )
 }
 
-export default signup
+export default Signup
