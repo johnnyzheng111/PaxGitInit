@@ -34,3 +34,9 @@
 #NavToggle{
     margin-right: 40px;
 }
+
+#navbar-Border{
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #400480;
+  }

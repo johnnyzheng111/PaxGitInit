@@ -38,7 +38,7 @@ function NavBarIndex() {
 
   return (
 	<Router>
-    <div className="NavBarIndex">
+    <div className="NavBarIndex" id='navbar-Border'>
       <Navbar id='NavBarMain' variant="dark" 
 	  expand="md" sticky="top" collapseOnSelect>
         <Navbar.Brand id='NavBarLogoSign' href='/'>

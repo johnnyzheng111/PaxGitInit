@@ -75,16 +75,19 @@ function SignIn({setIsAuth}) {
     <div className="signin">
     <form action="">
         <h1>Sign in</h1>
-        <input placeholder="Email..." 
+        <div className='input'>
+        <input placeholder="Email..."
+        type="email" 
         onChange={(event) => {
             setLoginEmail(event.target.value);
           }} />
-        <input placeholder="Password..." 
+        <input placeholder="Password..."
+        type="password" name = "password" method="POST"
         onChange={(event) => {
             setLoginPassword(event.target.value);
           }} />
         <button onClick={login}>Sign in </button>
-
+        </div>
         <h6>Not yet register? <span>
         <form action="/signup" class="inline">
             <button class="float-left submit-button" >SignUp</button>
