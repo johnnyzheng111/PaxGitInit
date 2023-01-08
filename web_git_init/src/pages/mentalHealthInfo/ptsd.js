@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ptsd = () => {
+const Ptsd = () => {
   return (
     <>
         <div className='background'>
@@ -64,4 +64,4 @@ const ptsd = () => {
   )
 }
 
-export default ptsd
+export default Ptsd

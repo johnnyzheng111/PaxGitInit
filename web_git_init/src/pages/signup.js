@@ -29,13 +29,14 @@ function Signup() {
           auth,
           registerEmail,
           registerPassword
-        ).then((userCredential)=>{
-          // send verification mail.
-        userCredential.user.sendEmailVerification();
-        auth.signOut();
-        alert("Email sent");
-      }).catch(alert);
-        console.log(user);
+        )
+      //   .then((userCredential)=>{
+      //   userCredential.user.sendEmailVerification();
+      //   auth.signOut();
+      //   alert("Email sent");
+      // }).catch(alert);
+      //   console.log(user)
+        ;
       } catch (error) {
         console.log(error.message);
       }
