@@ -74,3 +74,54 @@
 .signin__link:hover{
     text-decoration: underline;
 }
+
+.input{
+  border-radius: 100px;
+}
+
+#Section{
+  display: inline-block;
+  align-items: center;
+  font-size: 24px;
+  margin: 5vh 40vh 5vh 40vh
+}
+
+
+
+#list{
+  text-align:justify;
+}
+
+#doubleBulletPoints{
+  list-style-type: lower-alpha;
+  padding-bottom: 0;
+  font-size: 18px;
+}
+#tripleBulletPoints{
+  list-style-type:lower-roman;
+  padding-bottom: 0;
+  font-size: 14px;
+}
+#firstBulletPoint{
+  margin-left:2em
+}
+#secondBulletPoint{
+  margin-left:2em; padding-bottom: 0;
+}
+
+.background{
+  background-color: black;
+  color: white;
+}
+
+#image{
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+#navbar-Border{
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #400480;
+}

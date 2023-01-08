@@ -2,7 +2,10 @@ import React from 'react'
 
 const Schizophrenia = () => {
   return (
-    <div>schizophrenia</div>
+<div>
+  
+</div>
+
   )
 }
 
